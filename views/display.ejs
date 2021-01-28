@@ -1,0 +1,42 @@
+<html>
+<head>
+  <title>Movie Review</title>
+  <link href="/static/styles.css" rel="stylesheet"/>
+  <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+<body>
+
+  <% if(data.Response === "False"){ %>
+   <script> alert('Enter valid movie name') </script>
+   <% }else{ %>
+  <table class="table table-striped" style="margin-top:50px">
+    <thead>
+      <tr>
+        <th scope="col">TITLE</th>
+        <th scope="col">YEAR</th>
+        <th scope="col">RELEASED</th>
+        <th scope="col">GENRE</th>
+        <th scope="col">DIRECTOR</th>
+        <th scope="col">WRITER</th>
+        <th scope="col">ACTORS</th>
+        <th scope="col">PLOT</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= data.Title %></td>
+        <td><%= data.Year %></td>
+        <td><%= data.Released %></td>
+        <td><%= data.Genre %></td>
+        <td><%= data.Director %></td>
+        <td><%= data.Writer %></td>
+        <td><%= data.Actors %></td>
+        <td><%= data.Plot %></td>
+      </tr>
+    </tbody>
+  </table>
+<% } %>
+  <a href ="/">Back</a>
+</body>
+</html>
